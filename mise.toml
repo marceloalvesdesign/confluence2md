@@ -1,0 +1,13 @@
+[tools]
+"cargo:cargo-machete" = "0.8.0"
+"rust" = "1.95.0"
+
+[tasks.ci]
+description = "Run all CI checks: fmt, clippy, build, test, machete"
+run = [
+  "cargo fmt --all -- --check",
+  "cargo clippy --all-targets -- -D warnings",
+  "cargo build",
+  "cargo test --all-targets",
+  "cargo machete",
+]

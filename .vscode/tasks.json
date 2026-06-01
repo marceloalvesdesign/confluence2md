@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"command": "mise",
+			"args": [
+				"run",
+				"ci"
+			],
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"label": "mise run ci"
+		}
+	]
+}
