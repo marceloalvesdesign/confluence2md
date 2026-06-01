@@ -1,5 +1,5 @@
 //! Integration tests that exercise the modules against the
-//! `test/input/confluence_content.json` fixture. The fixture mirrors the shape
+//! `tests/input/confluence_content.json` fixture. The fixture mirrors the shape
 //! of a Confluence REST API page response.
 
 use std::sync::OnceLock;
@@ -19,7 +19,7 @@ fn fixture() -> &'static Value {
     FIXTURE.get_or_init(|| {
         let path = concat!(
             env!("CARGO_MANIFEST_DIR"),
-            "/test/input/confluence_content.json"
+            "/tests/input/confluence_content.json"
         );
         let raw = std::fs::read_to_string(path).expect("fixture readable");
         serde_json::from_str(&raw).expect("fixture parses as JSON")

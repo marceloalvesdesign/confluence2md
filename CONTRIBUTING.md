@@ -103,7 +103,7 @@ cargo clean
 - Integration tests that span modules live in `tests/*.rs` (currently `tests/integration.rs`).
 - Async tests use `#[tokio::test]`.
 - HTTP integration tests use [`wiremock`](https://crates.io/crates/wiremock) (see `src/confluence.rs` tests).
-- Shared fixtures are at `test/input/confluence_content.json` (also used by the legacy TS tests).
+- Shared fixtures are at `tests/input/confluence_content.json` (also used by the legacy TS tests).
 - All exported (`pub`) functions must have corresponding tests.
 
 ## Code Style

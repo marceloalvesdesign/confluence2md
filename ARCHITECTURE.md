@@ -317,7 +317,7 @@ No other external services are called.
 - **Build / test:** `cargo build`, `cargo test`, `mise run ci`.
 - **Unit tests:** `#[cfg(test)] mod tests` at the bottom of each `src/*.rs` file.
 - **Integration tests:** under `tests/` (e.g. `tests/integration.rs`); HTTP behavior is faked with [`wiremock`](https://crates.io/crates/wiremock); async tests use `#[tokio::test]`.
-- **Fixtures:** `test/input/confluence_content.json`.
+- **Fixtures:** `tests/input/confluence_content.json`.
 - **Lint / format:** `cargo clippy --all-targets -- -D warnings`, `cargo fmt --all`.
 
 ---

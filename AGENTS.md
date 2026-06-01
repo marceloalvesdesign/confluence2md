@@ -32,7 +32,7 @@ This document defines rules that AI coding agents **must** follow when working o
   - Unit tests live in `#[cfg(test)] mod tests { ... }` at the bottom of each `src/*.rs` file.
   - Integration tests that span modules live in `tests/*.rs` (e.g. `tests/integration.rs`).
   - Async tests use `#[tokio::test]`. HTTP integration tests use [`wiremock`](https://crates.io/crates/wiremock).
-  - Tests share the fixture at `test/input/confluence_content.json`.
+  - Tests share the fixture at `tests/input/confluence_content.json`.
 - **Strict warnings:** The project must compile cleanly under `cargo clippy --all-targets -- -D warnings`. Avoid `unsafe`. Do not introduce `#[allow(...)]` to silence lints without justification.
 - **No extra dependencies:** Do not add new crates without explicit approval. The current dependency set is listed in `Cargo.toml`.
 - **Jira links:** Do not hardcode an organization-specific Jira browse URL. Jira issue links must be derived from rendered Jira issue links in the Confluence REST API response when available; otherwise keep the issue key as plain text.
