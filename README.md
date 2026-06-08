@@ -14,10 +14,10 @@ confluence2md [--output-path <dir>] <pageUrl>
 ## ✨ What It Does
 
 ```
-┌──────────────┐       ┌──────────────┐       ┌──────────────────┐
-│  Confluence   │──────▶│ confluence2md │──────▶│   Markdown + 📁  │
-│    Page URL   │       │              │       │   Local Assets   │
-└──────────────┘       └──────────────┘       └──────────────────┘
+┌──────────────┐       ┌───────────────┐       ┌──────────────────┐
+│ Confluence   │──────▶│ confluence2md │──────▶│   Markdown + 📁  │
+│   Page URL   │       │               │       │   Local Assets   │
+└──────────────┘       └───────────────┘       └──────────────────┘
 ```
 
 confluence2md fetches a Confluence page via REST API and converts it to GitHub-Flavored Markdown (GFM) with:
