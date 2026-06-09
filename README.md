@@ -66,7 +66,8 @@ Download the latest release from the [Releases](https://github.com/Toyota/conflu
 
 > [!NOTE]
 > Currently, official binary releases are only available for Linux x86_64.
-> If there is demand, we will consider providing binaries for other platforms such as macOS and/or Windows, so please feel free to request them.
+> For windows, we need 'Visual Studio Build Tools' refer to [CONTRIBUTING.md](CONTRIBUTING.md).
+> If there is demand, we will consider providing binaries for other platforms such as macOS, so please feel free to request them.
 > We have not tested other platforms, but since we do not use any platform-specific features, it should work on other platforms if you build from source code.
 > For build instructions, refer to [CONTRIBUTING.md](CONTRIBUTING.md).
 
