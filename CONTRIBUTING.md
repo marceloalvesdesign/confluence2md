@@ -50,6 +50,18 @@ Logic modules live under `src/*.rs`. Types are co-located with the module that o
 
 ## Development Workflow
 
+### [OPTIONAL] For windows build to succeed
+
+- Install Visual Studio Build Tools (recommended, smallest install):
+   - Download the Visual Studio Installer from: https://visualstudio.microsoft.com/downloads/ (scroll down to Tools for Visual Studio → Build Tools for Visual Studio 2022)
+   - Run the installer.
+   - Select "C++ build tools" workload.
+   - Make sure these individual components are checked:
+      - MSVC v143 - VS 2022 C++ x64/x86 build tools (Latest)
+      - Windows 10/11 SDK (latest version)
+   - Click Install (it’s in GB).
+- After installation, restart your terminal / VS Code (very important — refreshes PATH). Follow below build instructions
+
 ### Build
 
 ```bash
