@@ -50,6 +50,18 @@ Logic modules live under `src/*.rs`. Types are co-located with the module that o
 
 ## Development Workflow
 
+### [OPTIONAL] For windows build to succeed
+
+- Install Visual Studio Build Tools (recommended, smallest install):
+   - Download the Visual Studio Installer from: https://visualstudio.microsoft.com/downloads/ (scroll down to Tools for Visual Studio → Build Tools for Visual Studio 2022)
+   - Run the installer.
+   - Select "C++ build tools" workload.
+   - Make sure these individual components are checked:
+      - MSVC v143 - VS 2022 C++ x64/x86 build tools (Latest)
+      - Windows 10/11 SDK (latest version)
+   - Click Install (it’s in GB).
+- After installation, restart your terminal / VS Code (very important — refreshes PATH). Follow below build instructions
+
 ### Build
 
 ```bash
@@ -134,16 +146,8 @@ cargo clean
    ```bash
    git tag vx.y.z -m "Release version x.y.z"
    ```
-4. Build the optimized binary:
+4. Push the tag to GitHub:
    ```bash
-   CARGO_HOME="${CARGO_HOME:-$HOME/.cargo}"
-   SYSROOT=$(rustc --print sysroot)
-
-   cargo build --release --config "build.rustflags=[
-     '--remap-path-prefix','$(pwd)=/src',
-     '--remap-path-prefix','$CARGO_HOME=/cargo',
-     '--remap-path-prefix','${SYSROOT}=/rust'
-   ]"
-   # Output: target/release/confluence2md
+   git push origin vx.y.z
    ```
-5. Publish a GitHub Release for the tag and attach `target/release/confluence2md` as a release asset.
+5. Publish a GitHub Release for the tag automatically using GitHub Workflow
