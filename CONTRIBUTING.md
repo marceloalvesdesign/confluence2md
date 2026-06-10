@@ -146,16 +146,8 @@ cargo clean
    ```bash
    git tag vx.y.z -m "Release version x.y.z"
    ```
-4. Build the optimized binary:
+4. Push the tag to GitHub:
    ```bash
-   CARGO_HOME="${CARGO_HOME:-$HOME/.cargo}"
-   SYSROOT=$(rustc --print sysroot)
-
-   cargo build --release --config "build.rustflags=[
-     '--remap-path-prefix','$(pwd)=/src',
-     '--remap-path-prefix','$CARGO_HOME=/cargo',
-     '--remap-path-prefix','${SYSROOT}=/rust'
-   ]"
-   # Output: target/release/confluence2md
+   git push origin vx.y.z
    ```
-5. Publish a GitHub Release for the tag and attach `target/release/confluence2md` as a release asset.
+5. Publish a GitHub Release for the tag automatically using GitHub Workflow
